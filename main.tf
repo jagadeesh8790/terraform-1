@@ -1,11 +1,7 @@
-terraform{
-  required_provider{
-  docker = {
-    source = "kruezwerker/docker"
-    version = "2.17.0"	
-   }
-  }  
- } 
+provider "docker" {
+  version = "~> 2.17.0"
+  host    = "unix:///var/run/docker.sock"
+}
  provider "docker"{
   host = "unix:///var.run.docker.sock"
  }

@@ -1,4 +1,12 @@
- provider "docker"{
+terraform{
+  required_provider{
+  docker = {
+    source = "kruezwerker/docker"
+    version = "2.17.0"	
+   }
+  }  
+}
+provider "docker"{
   host = "unix:///var.run.docker.sock"
  }
 #pulls the image 

@@ -10,7 +10,7 @@ terraform {
 
 provider "aws" {
   	region 			 = "ap-south-1"
-	shared_credentials_files = ["C:\Users\admin\.aws"]
+	shared_credentials_files = ["%USERPROFILE%\.aws\credentials"]
 }
 
 resource "aws_instance" "example" {

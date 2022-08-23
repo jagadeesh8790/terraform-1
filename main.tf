@@ -7,10 +7,11 @@ terraform {
   }
 }
 
-
 provider "aws" {
-  	region 			 = "ap-south-1"
-	shared_credentials_files = ["%USERPROFILE%\.aws\credentials"]
+  shared_config_files      = ["/Users/admin/.aws/conf"]
+  shared_credentials_files = ["/Users/admin/.aws/creds"]
+  profile                  = "default"
+  region		   = "ap-south-1"	
 }
 
 resource "aws_instance" "example" {

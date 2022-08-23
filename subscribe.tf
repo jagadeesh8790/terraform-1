@@ -1,14 +1,16 @@
 terraform {
   required_providers {
     aws = {
-      source  = "hashicorp/aws"
-      version = "~> 4.0"
+      source = "hashicorp/aws"
+
     }
   }
 }
 
 provider "aws" {
-  region = "ap-south-1"
+  region     = "ap-south-1"
+  access_key = "AKIAYH4Y7SQAB7MLFDIB"
+  secret_key = "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"
 }
 
 resource "aws_budgets_budget" "like-and_subscribe" {
